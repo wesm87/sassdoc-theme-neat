@@ -15,6 +15,11 @@
     "neat",
     "documentation"
   ],
+  "scripts": {
+    "build": "gulp build",
+    "version": "npm run --silent build",
+    "postversion": "git push && git push --tags && npm publish"
+  },
   "dependencies": {
     "extend": "^3.0.0",
     "sassdoc-extras": "^2.0.0",
