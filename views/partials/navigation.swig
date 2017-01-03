@@ -1,13 +1,5 @@
 
 <nav class="side-nav">
-  <ul class="social">
-    <li class="social-item">
-      <a class="social-link github" href="{{ view.links.github }}">
-        GitHub / Install
-      </a>
-    </li>
-  </ul>
-
   <a class="logo-container" href="{{ view.library.homepage }}">
     <img class="logo" alt="{{ view.library.name }} Logo" src="{{ view.logoPath }}">
   </a>
