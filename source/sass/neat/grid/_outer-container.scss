@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 
 /// Makes an element a outer container by centring it in the viewport, clearing its floats, and setting its `max-width`.
 /// Although optional, using `outer-container` is recommended. The mixin can be called on more than one element per page, as long as they are not nested.
@@ -20,7 +20,7 @@
 ///   }
 ///
 ///   .element:before, .element:after {
-///     content: " ";
+///     content: ' ';
 ///     display: table;
 ///   }
 ///

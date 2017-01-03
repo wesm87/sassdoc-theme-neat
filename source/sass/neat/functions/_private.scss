@@ -82,7 +82,7 @@
 @function get-direction($layout, $default) {
   $direction: null;
 
-  @if to-upper-case($layout) == "LTR" or to-upper-case($layout) == "RTL" {
+  @if to-upper-case($layout) == 'LTR' or to-upper-case($layout) == 'RTL' {
     $direction: direction-from-layout($layout);
   } @else {
     $direction: direction-from-layout($default);
@@ -94,7 +94,7 @@
 @function direction-from-layout($layout) {
   $direction: null;
 
-  @if to-upper-case($layout) == "LTR" {
+  @if to-upper-case($layout) == 'LTR' {
     $direction: right;
   } @else {
     $direction: left;
@@ -106,7 +106,7 @@
 @function get-opposite-direction($direction) {
   $opposite-direction: left;
 
-  @if $direction == "left" {
+  @if $direction == 'left' {
     $opposite-direction: right;
   }
 

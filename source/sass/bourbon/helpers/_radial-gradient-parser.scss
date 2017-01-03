@@ -1,14 +1,14 @@
 @function _radial-gradient-parser($image) {
   $image: unquote($image);
   $gradients: ();
-  $start: str-index($image, "(");
-  $end: str-index($image, ",");
+  $start: str-index($image, '(');
+  $end: str-index($image, ',');
   $first-val: str-slice($image, $start + 1, $end - 1);
 
   $prefix: str-slice($image, 0, $start);
   $suffix: str-slice($image, $end, str-length($image));
 
-  $is-spec-syntax: str-index($first-val, "at");
+  $is-spec-syntax: str-index($first-val, 'at');
 
   @if $is-spec-syntax and $is-spec-syntax > 1 {
     $keyword: str-slice($first-val, 1, $is-spec-syntax - 2);
@@ -30,8 +30,8 @@
     )
   }
 
-  @else if str-index($image, "cover") or str-index($image, "contain") {
-    @warn "Radial-gradient needs to be updated to conform to latest spec.";
+  @else if str-index($image, 'cover') or str-index($image, 'contain') {
+    @warn 'Radial-gradient needs to be updated to conform to latest spec.';
 
     $gradients: (
       webkit-image: null,

@@ -1,31 +1,31 @@
-var extend = require("extend");
-var extras = require("sassdoc-extras");
-var swig = new require('swig');
-var swigExtras = require("swig-extras");
-var themeleon = require("themeleon")().use("consolidate");
+const extend = require('extend');
+const extras = require('sassdoc-extras');
+const swig = new require('swig');
+const swigExtras = require('swig-extras');
+const themeleon = require('themeleon')().use('consolidate');
 
-swigExtras.useFilter(swig, "split");
-swigExtras.useFilter(swig, "trim");
-swigExtras.useFilter(swig, "groupby");
+swigExtras.useFilter(swig, 'split');
+swigExtras.useFilter(swig, 'trim');
+swigExtras.useFilter(swig, 'groupby');
 
-var theme = themeleon(__dirname, function (t) {
-  t.copy("assets");
+const theme = themeleon(__dirname, function (t) {
+  t.copy('assets');
   t.swig('views/index.swig', 'index.html');
 });
 
 module.exports = function (dest, ctx) {
-  var def = {
+  const def = {
     display: {
-      access: ["public", "private"],
+      access: ['public', 'private'],
       alias: false,
       watermark: true,
     },
     groups: {
-      "undefined": "General",
+      'undefined': 'General',
     }
   };
 
-  ctx.view = extend(require("./view.json"), ctx.view);
+  ctx.view = extend(require('./view.json'), ctx.view);
   ctx.groups = extend(def.groups, ctx.groups);
   ctx.display = extend(def.display, ctx.display);
   ctx = extend({}, def, ctx);

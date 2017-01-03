@@ -13,19 +13,19 @@
       $url-str:       str-slice($border-str, 0, 3);
       $gradient-type: str-slice($border-str, 0, 6);
 
-      @if $url-str == "url" {
+      @if $url-str == 'url' {
         $webkit-border: $border;
           $spec-border: $border;
       }
 
-      @else if $gradient-type == "linear" {
-        $gradients: _linear-gradient-parser("#{$border}");
+      @else if $gradient-type == 'linear' {
+        $gradients: _linear-gradient-parser('#{$border}');
         $webkit-border: map-get($gradients, webkit-image);
         $spec-border:   map-get($gradients, spec-image);
       }
 
-      @else if $gradient-type == "radial" {
-        $gradients: _radial-gradient-parser("#{$border}");
+      @else if $gradient-type == 'radial' {
+        $gradients: _radial-gradient-parser('#{$border}');
         $webkit-border: map-get($gradients, webkit-image);
         $spec-border:   map-get($gradients, spec-image);
       }
@@ -51,8 +51,8 @@
 }
 
 //Examples:
-// @include border-image(url("image.png"));
-// @include border-image(url("image.png") 20 stretch);
+// @include border-image(url('image.png'));
+// @include border-image(url('image.png') 20 stretch);
 // @include border-image(linear-gradient(45deg, orange, yellow));
 // @include border-image(linear-gradient(45deg, orange, yellow) stretch);
 // @include border-image(linear-gradient(45deg, orange, yellow) 20 30 40 50 stretch round);

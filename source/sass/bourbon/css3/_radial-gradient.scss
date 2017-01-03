@@ -23,7 +23,7 @@
   $first-color: nth($full, 1);
   $fallback-color: nth($first-color, 1);
 
-  @if (type-of($fallback) == color) or ($fallback == "transparent") {
+  @if (type-of($fallback) == color) or ($fallback == 'transparent') {
     $fallback-color: $fallback;
   }
 
@@ -35,5 +35,5 @@
 
   background-color:  $fallback-color;
   background-image: -webkit-radial-gradient(unquote(#{$pos}#{$shape-size}#{$full}));
-  background-image: unquote("radial-gradient(#{$shape-size-spec}#{$pos-spec}#{$full})");
+  background-image: unquote('radial-gradient(#{$shape-size-spec}#{$pos-spec}#{$full})');
 }

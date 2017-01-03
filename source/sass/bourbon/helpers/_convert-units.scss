@@ -8,7 +8,7 @@
   $index: index($strings, $unit);
 
   @if not $index {
-    @warn "Unknown unit `#{$unit}`.";
+    @warn 'Unknown unit `#{$unit}`.';
     @return false;
   }
   @return $number * nth($units, $index);

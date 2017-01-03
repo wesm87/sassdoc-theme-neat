@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 
 /// Designates the element as a row of columns in the grid layout. It clears the floats on the element and sets its display property. Rows can't be nested, but there can be more than one row element—with different display properties—per layout.
 ///
@@ -20,7 +20,7 @@
 ///  }
 ///
 /// .element:before, .element:after {
-///   content: " ";
+///   content: ' ';
 ///   display: table;
 /// }
 ///
@@ -30,13 +30,13 @@
 
 @mixin row($display: default, $direction: $default-layout-direction) {
   @if $direction != $default-layout-direction {
-    @include -neat-warn("The $direction argument will be deprecated in future versions in favor of the direction(){...} mixin.");
+    @include -neat-warn('The $direction argument will be deprecated in future versions in favor of the direction(){...} mixin.');
   }
 
   $layout-direction: $direction !global;
 
   @if $display != default {
-    @include -neat-warn("The $display argument will be deprecated in future versions in favor of the display(){...} mixin.");
+    @include -neat-warn('The $display argument will be deprecated in future versions in favor of the display(){...} mixin.');
   }
 
   @if $display == table {

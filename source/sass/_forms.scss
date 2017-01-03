@@ -39,17 +39,17 @@ textarea {
   resize: vertical;
 }
 
-input[type="search"] {
+input[type='search'] {
   @include appearance(none);
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   display: inline;
   margin-right: $base-spacing / 4;
 }
 
-input[type="file"] {
+input[type='file'] {
   padding-bottom: $base-spacing / 2;
   width: 100%;
 }
