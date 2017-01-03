@@ -1,7 +1,7 @@
 {
   "name": "sassdoc-theme-wesm87",
   "description": "Custom SassDoc theme (based on sassdoc-theme-neat)",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Wes Moberly",
   "license": "MIT",
   "repository": {
