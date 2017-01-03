@@ -5,7 +5,7 @@
     {% if not title_displayed %}
       {% set title_displayed = true %}
       <h3 class="sub-heading">See</h3>
-      <ul class="list-unstyled  list-inline">
+      <ul class="list-unstyled list-inline">
     {% endif %}
 
     <li><a href="#{{ see.context.type }}-{{ see.context.name }}"><code>{{ see.context.name }}</code></a></li>
