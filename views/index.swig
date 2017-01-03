@@ -7,9 +7,9 @@
         <h1>{{ package.name | capitalize }}{% if package.version %} <span>{{ package.version }}</span>{% endif %}</h1>
       </div>
 
-      <div class="search-form" data-role="search-form">
-        <input name="search" type="text" class="search-field" autocomplete="off" autofocus id="search-field" placeholder="Search documentation..." />
-        <ul class="suggestion-container"></ul>
+      <div class="search-form" id="js-search-form">
+        <input name="search" type="text" class="search-field" autocomplete="off" autofocus id="js-search-field" placeholder="Search documentation..." />
+        <ul class="suggestion-container" id="js-suggestions-container"></ul>
       </div>
     </section>
   </header>

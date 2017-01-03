@@ -14,8 +14,8 @@
 
   <ul class="list">
     {% for group_name, group in data.byGroupAndType %}
-      <ul class="list-group">
-        <li class="list-group-title">
+      <ul class="list-group js-list-group">
+        <li class="list-group-title js-list-group-toggle">
           {{group_name}}
         </li>
         {% for type, items in group %}
